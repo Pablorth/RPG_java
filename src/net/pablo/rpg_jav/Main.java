@@ -28,19 +28,19 @@ public class Main {
 				if(choice == 1) {
 					System.out.println("Le Chavalier! Choisie lui un nom!!");
 					Scanner scanName = new Scanner (System.in);
-					Player player1 = new Player(scanName.nextLine(), 300, 50);
+					Knight player1 = new Knight(scanName.nextLine(), 300, 50);
 					
 				} 
 				else if(choice == 2) {
 					System.out.println("Le Mage! Choisie lui un nom!!");
 					Scanner scanName = new Scanner (System.in);
-					Player player1 = new Player(scanName.nextLine(), 300, 50);
+					Mage player1 = new Mage(scanName.nextLine(), 300, 50);
 					
 				}
 				else if(choice == 3) {
 					System.out.println("Le l'Archer! Choisie lui un nom!!");
 					Scanner scanName = new Scanner (System.in);
-					Player player1 = new Player(scanName.nextLine(), 300, 50);
+					Archer player1 = new Archer(scanName.nextLine(), 300, 50);
 					
 				}
 			}
