@@ -17,6 +17,14 @@ public class Main {
 			Scanner scan = new Scanner (System.in);
 			int choice = scan.nextInt();
 			if (choice != 1 && choice != 2 && choice !=3) {
+					System.out.println("Tu a le choix entre 1 , 2 ou 3!!!");
+				System.out.println("Joueur 1: choisi ton Champion!");
+				System.out.println("Pour le Chavalier : tape 1");
+				System.out.println("Pour le Mage : tape 2");
+				System.out.println("Pour l'Archer : tape 3");
+				scan = new Scanner (System.in);
+				
+			} else {
 				if(choice == 1) {
 					System.out.println("Le Chavalier! Choisie lui un nom!!");
 					Scanner scanName = new Scanner (System.in);
@@ -34,14 +42,7 @@ public class Main {
 					Scanner scanName = new Scanner (System.in);
 					Player player1 = new Player(scanName.nextLine(), 300, 50);
 					
-				}	
-			} else {
-				System.out.println("Tu a le choix entre 1 , 2 ou 3!!!");
-				System.out.println("Joueur 1: choisi ton Champion!");
-				System.out.println("Pour le Chavalier : tape 1");
-				System.out.println("Pour le Mage : tape 2");
-				System.out.println("Pour l'Archer : tape 3");
-				scan = new Scanner (System.in);
+				}
 			}
 			
 		
