@@ -13,6 +13,7 @@ public class Main {
 		System.out.println(player4.getHealth());
 		player4.damage(player5.getAtk());
 		System.out.println(player4.getHealth());
+		player4.heal(10);
 		
 		int start = 0;
 		while (start == 0) {
@@ -61,73 +62,86 @@ public class Main {
 				
 			} 
 			
+			Champion player2 = null;
 			if(choice2 == 1) {
 				System.out.println("Le Chavalier! Choisie lui un nom!!");
 				Scanner scanName = new Scanner (System.in);
-				Knight player2 = new Knight(scanName.nextLine(), 300, 50);
+				player2 = new Knight(scanName.nextLine(), 300, 50);
 				System.out.println("Bienvenu " + player2.getName() +" \n");
 				
 			} else if(choice2 == 2) {
 				System.out.println("Le Mage! Choisie lui un nom!!");
 				Scanner scanName = new Scanner (System.in);
-				Mage player2 = new Mage(scanName.nextLine(), 300, 50);
+				player2 = new Mage(scanName.nextLine(), 300, 50);
 				System.out.println("Bienvenu " + player2.getName()+" \n");
 				
 			} else if(choice2 == 3) {
 				System.out.println("L'Archer! Choisie lui un nom!! ");
 				Scanner scanName = new Scanner (System.in);
-				Archer player2 = new Archer(scanName.nextLine(), 300, 50);
+				player2 = new Archer(scanName.nextLine(), 300, 50);
 				System.out.println("Bienvenu " + player2.getName() +" \n");
 				
 			}
-			//System.out.println("Se sera " + player2.getName() +" \n");
+			
+			System.out.println(player2.getName());
 			start = 1;
 		} 
 		
 		while (start != 0){
 			
-			int turn = 0;
-			while (turn == 0) {
-				int choice =0;
-				while(choice != 1 && choice != 2 && choice !=3) {
-					System.out.println("Joueur 1 que fait tu?");
-					System.out.println("Tape 1 pour attaquer. ");
-					System.out.println("Tape 2 pour te protéger. ");
-					System.out.println("Tape 3 pour te soigner. ");
-					Scanner scan = new Scanner (System.in);
-					choice = scan.nextInt();
-					if (choice == 1) {
-						turn = 1;
-					} else if (choice == 2) {
-						turn = 1;
-					} else if (choice == 3) {
-						turn = 1;
+			int health1 = 100;
+			int health2 = 100;
+			
+			while (health1 != 0 && health2 !=0) {
+				int turn = 0;
+				while (turn == 0) {
+					int choice =0;
+					while(choice != 1 && choice != 2 && choice !=3) {
+						System.out.println("Joueur 1 que fait tu?");
+						System.out.println("Tape 1 pour attaquer. ");
+						System.out.println("Tape 2 pour te protéger. ");
+						System.out.println("Tape 3 pour te soigner. ");
+						Scanner scan = new Scanner (System.in);
+						choice = scan.nextInt();
+						if (choice == 1) {
+							System.out.println("Joueur 1 attaque! ");
+							turn = 1;
+						} else if (choice == 2) {
+							System.out.println("Joueur 1 se protège! ");
+							turn = 1;
+						} else if (choice == 3) {
+							System.out.println("Joueur 1 se soigne! ");
+							turn = 1;
+						}
+					}
+					
+					
+				}
+				while(turn != 0 ) {
+					int choice =0;
+					while(choice != 1 && choice != 2 && choice !=3) {
+						System.out.println("Joueur 2 que fait tu?");
+						System.out.println("Tape 1 pour attaquer. ");
+						System.out.println("Tape 2 pour te protéger. ");
+						System.out.println("Tape 3 pour te soigner. ");
+						Scanner scan = new Scanner (System.in);
+						choice = scan.nextInt();
+						if (choice == 1) {
+							System.out.println("Joueur 1 attaque! ");
+							turn = 0;
+						} else if (choice == 2) {
+							System.out.println("Joueur 1 se protège! ");
+							turn = 0;
+						} else if (choice == 3) {
+							System.out.println("Joueur 1 se soigne! ");
+							turn = 0;
+						}
 					}
 				}
-				
-				
-			}
-			while(turn != 0 ) {
-				int choice =0;
-				while(choice != 1 && choice != 2 && choice !=3) {
-					System.out.println("Joueur 2 que fait tu?");
-					System.out.println("Tape 1 pour attaquer. ");
-					System.out.println("Tape 2 pour te protéger. ");
-					System.out.println("Tape 3 pour te soigner. ");
-					Scanner scan = new Scanner (System.in);
-					choice = scan.nextInt();
-					if (choice == 1) {
-						turn = 0;
-					} else if (choice == 2) {
-						turn = 0;
-					} else if (choice == 3) {
-						turn = 0;
-					}
-				}
-			}
-			
-			
-			start = 0;
+			} 
+			if (health1 == 0 || health2 ==0){
+				start = 0;
+			}	
 			
 		}
 		
