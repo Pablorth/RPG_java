@@ -3,6 +3,8 @@ package net.pablo.rpg_jav;
 public class Mage extends Champion {
 	
 	private int health;
+	private int cat = 2;
+	
 	
 	public Mage(String name, int maxHealth, int atk) {
 		super(name, maxHealth, atk);
@@ -19,6 +21,15 @@ public class Mage extends Champion {
 	}
 	
 	
+	public int getCat() {
+		return cat;
+	}
+
+
+	public void setCat(int cat) {
+		this.cat = cat;
+	}
+
 
 	@Override
 	public void protect(int damage) {
@@ -37,12 +48,5 @@ public class Mage extends Champion {
 
 	}
 
-
-
-
-
-
-
-	
 
 }

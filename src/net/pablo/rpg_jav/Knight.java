@@ -3,6 +3,7 @@ package net.pablo.rpg_jav;
 public class Knight extends Champion {
 
 	private int health;
+	private int cat = 1;
 
 	public Knight(String name, int health, int atk) {
 		super(name, health, atk);
@@ -17,6 +18,16 @@ public class Knight extends Champion {
 	public void setHealth(int health) {
 		this.health = health;
 	}
+	
+	
+	public int getCat() {
+		return cat;
+	}
+
+	public void setCat(int cat) {
+		this.cat = cat;
+	}
+
 	
 	
 	@Override
@@ -34,4 +45,5 @@ public class Knight extends Champion {
 		 this.setHealth(this.getHealth() - damage);
 	}
 
+	
 }
