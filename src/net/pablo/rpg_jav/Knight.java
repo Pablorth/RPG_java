@@ -32,7 +32,7 @@ public class Knight extends Champion {
 	
 	@Override
 	public void protect(int damage) {
-		this.setHealth(this.getHealth() - 0);
+		this.setMaxHealth(this.getMaxHealth() - 0);
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class Knight extends Champion {
 	
 	@Override
 	public void damage( int damage) {
-		 this.setHealth(this.getHealth() - damage);
+		 this.setMaxHealth(this.getMaxHealth() - damage);
 	}
 
 	

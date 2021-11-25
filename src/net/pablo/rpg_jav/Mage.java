@@ -33,18 +33,18 @@ public class Mage extends Champion {
 
 	@Override
 	public void protect(int damage) {
-		this.setHealth(this.getHealth() - (damage/2));
+		this.setMaxHealth(this.getMaxHealth() - (damage/2));
 	}
 
 	@Override
 	public void heal(int heal) {
-		this.setHealth(this.getHealth() + heal);
+		this.setMaxHealth(this.getHealth() + heal);
 
 	}
 
 	@Override
 	public void damage(int damage) {
-		this.setHealth(this.getHealth() - damage);
+		this.setMaxHealth(this.getMaxHealth() - damage);
 
 	}
 

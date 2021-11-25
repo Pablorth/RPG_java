@@ -29,7 +29,7 @@ public class Archer extends Champion {
 	
 	@Override
 	public void protect(int damage) {
-		this.setHealth(this.getHealth() - (damage/2));
+		this.setMaxHealth(this.getMaxHealth() - (damage/2));
 	}
 
 	
@@ -41,7 +41,7 @@ public class Archer extends Champion {
 
 	@Override
 	public void damage(int damage) {
-		this.setHealth(this.getHealth() - (damage*2));
+		this.setMaxHealth(this.getMaxHealth() - (damage));
 	}
 
 
